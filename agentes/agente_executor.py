@@ -1,8 +1,8 @@
 import os
 import io
 import pandas as pd
-from agentes import agente_prompt as prompt,agente_programador as programador, agente_descompactador as descompactador, agente_validador as validador
-
+# from agentes import agente_prompt as prompt,agente_programador as programador, agente_descompactador as descompactador, agente_validador as validador
+from agentes import agente_prompt as prompt,agente_programador as programador, agente_descompactador as descompactador, agente_descompactador_url as descompactador_url
 
 class Agente:
     def __init__(self):
@@ -16,10 +16,10 @@ class Agente:
         os.environ["GOOGLE_API_KEY"] = chave
 
 
-        arquivos=descompactador.descompactar_arquivos(url)
+        arquivos=descompactador_url.descompactar_arquivos(url)
 
 
-        amostras=descompactador.preparar_amostras_para_agente(arquivos)
+        amostras=descompactador_url.preparar_amostras_para_agente(arquivos)
 
         rest=programador.agrupar_arquivos(os.environ["GOOGLE_API_KEY"],amostras)
         codigo_limpo = rest.strip("```").replace("python", "").strip()
