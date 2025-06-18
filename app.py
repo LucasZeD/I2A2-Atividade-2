@@ -46,7 +46,7 @@ with st.sidebar:
     # )
     # Use quando em ambiente de produção
     # A chave de API será lida dos segredos do Streamlit
-    # api_key = st.secrets.get("GEMINI_API_KEY")
+    api_key = st.secrets.get("GEMINI_API_KEY")
 
     # Como padrao o arquivo CSV é baixado do GitHub do projeto i2a2
     default_url = "https://github.com/grupo274/pre-projeto-i2a2/raw/refs/heads/thiago/projeto_i2a2_thiago/dataset/compactado/202401_NFs.zip"
