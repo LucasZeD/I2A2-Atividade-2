@@ -1,3 +1,6 @@
+# Interface implementada e ajustes realizados para adequação, commit provisorio em repo particular para fins de deploy e uso da equipe e montagem de relatorio
+
+
 # Desafio 2 – Agentes de Inteligência Artificial (i2a2)
 
 Este projeto foi desenvolvido como parte do **Desafio 2** do curso da plataforma [i2a2](https://i2a2.com.br), com foco na criação de agentes de inteligência artificial.
